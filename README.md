@@ -20,6 +20,6 @@ Haz clic en el botón **Open in Colab** de cada sesión. Solo necesitas una cuen
 
 ## Estructura del repositorio
 
-- `notebooks/`: prácticas para abrir en Colab.
+- `notebooks/`: prácticas para abrir en Colab. En [notebooks/archivos_por_paso.md](notebooks/archivos_por_paso.md) se explica qué archivos genera cada paso y cuáles se usan después.
 - `data/`: datos del curso (ver [data/README.md](data/README.md)).
 - `teoria/`: lecturas y enlaces a los videos.
