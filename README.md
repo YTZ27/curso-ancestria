@@ -21,5 +21,6 @@ Haz clic en el botón **Open in Colab** de cada sesión. Solo necesitas una cuen
 ## Estructura del repositorio
 
 - `notebooks/`: prácticas para abrir en Colab. En [notebooks/archivos_por_paso.md](notebooks/archivos_por_paso.md) se explica qué archivos genera cada paso y cuáles se usan después.
+- `notebooks/preparar_datos_ancestria_local.ipynb`: prepara los datos de la semana 5. Lo corre la instructora una sola vez; los participantes no lo usan.
 - `data/`: datos del curso (ver [data/README.md](data/README.md)).
 - `teoria/`: lecturas y enlaces a los videos.
