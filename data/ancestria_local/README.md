@@ -37,10 +37,12 @@ rfmix -f chr22_consulta.vcf.gz \
       -g genetic_map_chr22_GRCh38.txt \
       -o rfmix_todos \
       --chromosome=chr22 \
-      --n-threads=2 -w PESO -t 50
+      --n-threads=2 -w 41 -t 50
 ```
 
-`PESO` es el valor que RFMix calibra solo (`Maximum scoring weight`) y que el cuaderno de la sesión 5 reutiliza para no repetir esa calibración, que tarda varios minutos. El valor exacto está en el cuaderno.
+`-w 41` es el valor que RFMix calibra solo (`Maximum scoring weight`) y que depende de las referencias, no de a quién se analice. La calibración tardó 18 minutos; con el valor ya dado, las 345 personas se procesan en 4 minutos y 18 segundos. `-t 50` usa 50 árboles en lugar de 100: los resultados coinciden en el 99,99 % de los SNPs.
+
+Al calibrar, RFMix evalúa qué tan bien se distinguen las referencias entre sí con haplotipos simulados. Con estas referencias acierta el 99,0 % de los africanos, el 98,8 % de los europeos y el 99,5 % de los nativos americanos. Con los Maya incluidos, la ancestría nativa americana bajaba al 97,3 %.
 
 ## Referencias
 

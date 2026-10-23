@@ -15,12 +15,12 @@ Haz clic en el botón **Open in Colab** de cada sesión. Solo necesitas una cuen
 | 2 | Práctica (sincrónica) | Preparación y control de calidad de datos (PLINK) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YTZ27/curso-ancestria/blob/main/notebooks/S2_S4_ancestria_global.ipynb) (semanas 2 y 4) |
 | 3 | Teoría (asincrónica) | Ancestría global | En construcción |
 | 4 | Práctica (sincrónica) | PCA y ADMIXTURE | Mismo cuaderno de la semana 2 |
-| 5 | Práctica (sincrónica) | Ancestría local: phasing y RFMix | En construcción |
+| 5 | Práctica (sincrónica) | Ancestría local: phasing y RFMix | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YTZ27/curso-ancestria/blob/main/notebooks/S5_ancestria_local.ipynb) |
 | 6 | Práctica (sincrónica) | Interpretación y aplicaciones | En construcción |
 
 ## Estructura del repositorio
 
 - `notebooks/`: prácticas para abrir en Colab. En [notebooks/archivos_por_paso.md](notebooks/archivos_por_paso.md) se explica qué archivos genera cada paso y cuáles se usan después.
 - `notebooks/preparar_datos_ancestria_local.ipynb`: prepara los datos de la semana 5. Lo corre la instructora una sola vez; los participantes no lo usan.
-- `data/`: datos del curso (ver [data/README.md](data/README.md)).
+- `data/`: datos del curso (ver [data/README.md](data/README.md) y [data/ancestria_local/README.md](data/ancestria_local/README.md)).
 - `teoria/`: lecturas y enlaces a los videos.
