@@ -1,6 +1,6 @@
 # Archivos que genera cada paso
 
-Cada comando del notebook [`S2_S4_ancestria_global.ipynb`](S2_S4_ancestria_global.ipynb) crea archivos nuevos. Esta guía explica qué es cada uno, si se usa después y para qué.
+Cada comando del notebook [`S1_formatos_y_calidad.ipynb`](S1_formatos_y_calidad.ipynb) y [`S2_pca_y_admixture.ipynb`](S2_pca_y_admixture.ipynb) crea archivos nuevos. Esta guía explica qué es cada uno, si se usa después y para qué.
 
 ## Mapa general
 
@@ -78,6 +78,8 @@ Este paso no modifica los datos: solo escribe listas. Con los datos del curso se
 **¿Por qué podar por LD?** El PCA y ADMIXTURE suponen que las variantes son independientes. Las variantes en LD repiten la misma información y le darían demasiado peso a algunas regiones del genoma (Alexander et al., 2009; Price et al., 2008).
 
 ## Paso 5. Análisis de componentes principales (PCA)
+
+> Los pasos 1 a 4 son la sesión 1; del 5 en adelante, la sesión 2. La sesión 2 rehace los pasos 1 a 4 en una sola celda antes de empezar.
 
 | Archivo | Qué es | ¿Se usa después? |
 |---|---|---|
