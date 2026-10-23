@@ -4,13 +4,14 @@
 
 La regla es siempre la misma: **el lunes sale el módulo, el sábado de esa misma semana es la sesión en vivo.**
 
+Cuatro semanas seguidas, del 9 de noviembre al 5 de diciembre.
+
 | Semana | Lunes | Sábado |
 |---|---|---|
-| 9 al 15 de noviembre | Apertura: acceso, repositorio y prueba de Colab | No hay sesión |
-| 16 al 21 de noviembre | Módulo 1: Fundamentos | Sesión 1 |
-| 23 al 28 de noviembre | Módulo 2: Ancestría global | Sesión 2 |
-| 30 de noviembre al 5 de diciembre | Módulo 3: Ancestría local | Sesión 3 |
-| 7 al 12 de diciembre | Módulo 4: Aplicaciones | Sesión 4 |
+| 1: 9 al 14 de noviembre | Módulo 1: Fundamentos | **14 nov** · Sesión 1 |
+| 2: 16 al 21 de noviembre | Módulo 2: Ancestría global | **21 nov** · Sesión 2 |
+| 3: 23 al 28 de noviembre | Módulo 3: Ancestría local | **28 nov** · Sesión 3 |
+| 4: 30 nov al 5 de diciembre | Módulo 4: Aplicaciones | **5 dic** · Sesión 4 |
 
 ## Módulos
 
