@@ -1,13 +1,13 @@
 # Archivos que genera cada paso
 
-Cada comando del notebook [`Ancestry_workshop.ipynb`](Ancestry_workshop.ipynb) crea archivos nuevos. Esta guía explica qué es cada uno, si se usa después y para qué.
+Cada comando del notebook [`S2_S4_ancestria_global.ipynb`](S2_S4_ancestria_global.ipynb) crea archivos nuevos. Esta guía explica qué es cada uno, si se usa después y para qué.
 
 ## Mapa general
 
 ```mermaid
 flowchart TD
     VCF["exome.vcf.gz<br/>datos de partida"] -->|"Paso 3: convertir"| RAW["exome_data<br/>.bed .bim .fam"]
-    RAW -->|"Paso 4: filtros de calidad"| QC["admixture_maf-0.01_geno-0.1_hwe-1e4<br/>.bed .bim .fam"]
+    RAW -->|"Paso 4: filtros de calidad"| QC["qc_maf-0.01_geno-0.1<br/>.bed .bim .fam"]
     QC -->|"Paso 4.1: poda por LD"| LIST["ld_pruned.prune.in<br/>variantes a conservar"]
     QC -->|"Paso 4.2: extraer esas variantes"| FINAL["admixture_LD_QC<br/>.bed .bim .fam"]
     LIST --> FINAL
@@ -51,10 +51,12 @@ flowchart TD
 
 | Archivo | Qué es | ¿Se usa después? |
 |---|---|---|
-| `admixture_maf-0.01_geno-0.1_hwe-1e4.bed` / `.bim` / `.fam` | Los mismos datos, solo con las variantes e individuos que pasaron los filtros. El nombre indica los filtros usados | Sí: entrada de la poda por LD (pasos 4.1 y 4.2) |
-| `admixture_maf-0.01_geno-0.1_hwe-1e4.log` | Resumen de los filtros | No, pero dice cuántas variantes e individuos eliminó cada filtro |
+| `qc_maf-0.01_geno-0.1.bed` / `.bim` / `.fam` | Los mismos datos, solo con las variantes e individuos que pasaron los filtros. El nombre indica los filtros usados | Sí: entrada de la poda por LD (pasos 4.1 y 4.2) |
+| `qc_maf-0.01_geno-0.1.log` | Resumen de los filtros | No, pero dice cuántas variantes e individuos eliminó cada filtro |
 
-Con los datos del curso no se elimina ningún individuo; 13 175 variantes no pasan Hardy-Weinberg, 133 575 tienen frecuencia menor al 1 % y quedan 97 555 variantes.
+Con los datos del curso no se elimina ningún individuo; 133 675 variantes tienen frecuencia menor al 1 % y quedan 110 630 variantes.
+
+**No filtramos por equilibrio de Hardy-Weinberg.** Ese filtro supone una sola población que se cruza al azar, y aquí hay 15 poblaciones juntas: al mezclarlas se ven menos heterocigotos de los esperados aunque cada una esté en equilibrio (efecto Wahlund). El efecto es más fuerte en las variantes que más difieren entre continentes, que son justo las informativas de ancestría: con estos datos, `--hwe 0.0001` eliminaba el 81,5 % de las variantes con diferencia de frecuencia mayor a 0,5 entre continentes. Para filtrar por Hardy-Weinberg en un análisis propio, hazlo dentro de cada población por separado.
 
 ### 4.1. Lista de variantes independientes
 
@@ -64,13 +66,13 @@ Con los datos del curso no se elimina ningún individuo; 13 175 variantes no pas
 | `ld_pruned.prune.out` | Lista de IDs eliminados por estar en LD con una variante que se conserva | No: solo para revisar |
 | `ld_pruned.log` | Registro del comando | No |
 
-Este paso no modifica los datos: solo escribe listas. Con los datos del curso se conservan 56 823 variantes y se eliminan 40 732.
+Este paso no modifica los datos: solo escribe listas. Con los datos del curso se conservan 59 850 variantes y se eliminan 50 780.
 
 ### 4.2. Datos finales
 
 | Archivo | Qué es | ¿Se usa después? |
 |---|---|---|
-| `admixture_LD_QC.bed` / `.bim` / `.fam` | Datos finales: pasaron el control de calidad y la poda por LD (969 individuos, 56 823 variantes) | Sí: entrada del PCA (paso 5) y de ADMIXTURE (paso 7). El `.fam` además identifica a cada individuo en los gráficos |
+| `admixture_LD_QC.bed` / `.bim` / `.fam` | Datos finales: pasaron el control de calidad y la poda por LD (969 individuos, 59 850 variantes) | Sí: entrada del PCA (paso 5) y de ADMIXTURE (paso 7). El `.fam` además identifica a cada individuo en los gráficos |
 | `admixture_LD_QC.log` | Registro del comando | No |
 
 **¿Por qué podar por LD?** El PCA y ADMIXTURE suponen que las variantes son independientes. Las variantes en LD repiten la misma información y le darían demasiado peso a algunas regiones del genoma (Alexander et al., 2009; Price et al., 2008).
@@ -122,5 +124,6 @@ No crea archivos: el gráfico se muestra en el notebook. Para guardarlo, clic de
 - Alexander DH, Novembre J, Lange K. Fast model-based estimation of ancestry in unrelated individuals. *Genome Res*. 2009;19:1655–1664. doi:10.1101/gr.094052.109
 - Chang CC, et al. Second-generation PLINK: rising to the challenge of larger and richer datasets. *GigaScience*. 2015;4:7. doi:10.1186/s13742-015-0047-8
 - Danecek P, et al. The variant call format and VCFtools. *Bioinformatics*. 2011;27:2156–2158. doi:10.1093/bioinformatics/btr330
+- Hartl DL, Clark AG. *Principles of Population Genetics*. 4.ª ed. Sinauer; 2007 (efecto Wahlund)
 - Price AL, et al. Long-range LD can confound genome scans in admixed populations. *Am J Hum Genet*. 2008;83:132–135. doi:10.1016/j.ajhg.2008.06.005
 - Purcell S, et al. PLINK: a tool set for whole-genome association and population-based linkage analyses. *Am J Hum Genet*. 2007;81:559–575. doi:10.1086/519795

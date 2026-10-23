@@ -12,9 +12,9 @@ Haz clic en el botón **Open in Colab** de cada sesión. Solo necesitas una cuen
 | Semana | Modalidad | Tema | Material |
 |---|---|---|---|
 | 1 | Teoría (asincrónica) | Fundamentos de genética poblacional y ancestría | En construcción |
-| 2 | Práctica (sincrónica) | Preparación y control de calidad de datos (PLINK) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YTZ27/curso-ancestria/blob/main/notebooks/Ancestry_workshop.ipynb) (borrador, semanas 2 y 4) |
+| 2 | Práctica (sincrónica) | Preparación y control de calidad de datos (PLINK) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YTZ27/curso-ancestria/blob/main/notebooks/S2_S4_ancestria_global.ipynb) (semanas 2 y 4) |
 | 3 | Teoría (asincrónica) | Ancestría global | En construcción |
-| 4 | Práctica (sincrónica) | PCA y ADMIXTURE | Ver borrador de la semana 2 |
+| 4 | Práctica (sincrónica) | PCA y ADMIXTURE | Mismo cuaderno de la semana 2 |
 | 5 | Práctica (sincrónica) | Ancestría local: phasing y RFMix | En construcción |
 | 6 | Práctica (sincrónica) | Interpretación y aplicaciones | En construcción |
 
