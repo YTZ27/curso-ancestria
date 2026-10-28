@@ -28,8 +28,14 @@ Cada módulo son unas 4 o 5 cápsulas de video de 6 minutos o menos, más una le
 
 ## Materiales
 
-- `Plan_curso_ancestria.docx`: el plan completo del curso.
-- `Teoria_curso_ancestria.pptx`: 36 diapositivas de los cuatro módulos, con notas del expositor.
+| Archivo | Qué es |
+|---|---|
+| `Modulo_1_Fundamentos.pptx` | Diapositivas del módulo 1, con notas del expositor |
+| `Modulo_2_Ancestria_global.pptx` | Diapositivas del módulo 2, con notas del expositor |
+| `Modulo_3_Ancestria_local.pptx` | Diapositivas del módulo 3, con notas del expositor |
+| `Modulo_4_Aplicaciones.pptx` | Diapositivas del módulo 4, con notas del expositor |
+| `Guia_para_dictar_el_curso.docx` | Guión minuto a minuto de las cuatro sesiones en vivo, qué decir en cada celda de código, qué hacer si algo falla y las preguntas más probables |
+| `Plan_curso_ancestria.docx` | El plan completo del curso |
 
 ## Referencias
 
